@@ -1,0 +1,242 @@
+.navber{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & ul{
+        display: flex;  
+    }
+    & ul li{
+        list-style: none;
+        margin: 0 10px;
+    }
+    & a{
+        text-decoration: none;
+        color: #2a2323;
+        font-size: 20px;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+}
+
+button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: aquamarine;
+    border-radius:10px;
+
+}
+.app_btn{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    & img{
+        padding:5px 5px;
+       
+    }
+    & div{
+        display: inline;
+        padding:5px 10px;
+        & p{
+            display: inline;
+        }
+        & h3{
+            display: inline;
+        }
+    }
+}
+
+/* -------- Banners ---------------------------------------------------------------- */
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .text_section {
+        margin-top: -90px;
+        margin-left:100px;
+        animation: text_anim 2s;
+
+        & h1{
+            font-size:90px;
+            
+        }
+    }
+    & .image_section {
+     
+        & img {
+           
+            width:800px;
+            height: 800px;
+            animation: banner_anim 2s;
+        }
+    }
+}
+
+@keyframes text_anim {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        
+    }
+    
+}
+@keyframes banner_anim {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        
+    }
+    
+}
+
+/* ------ target section -------------------------------- */
+
+.target{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    & .image_section{
+        & img{
+            width: 100%;
+            height: 100%;
+            animation: rotate_anim 5s;
+        }
+    }
+    & .text_section{
+        width:40%;
+        text-align: justify;
+        & h1{
+            font-size: 80px;
+            font-weight: 600;
+            display: inline;
+        }
+    }
+}
+
+@keyframes rotate_anim {
+    from{
+        transform: rotateY(60deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    } 
+}
+
+/* --------- anytime ----- */
+
+
+.anytime_section{
+    position: relative;
+    margin-top: 200px;
+
+    & .text_section{
+        position: absolute;
+        top:-150px;
+        left: 220px;
+        font-size:60px;
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    & .track_bg_img{
+        animation: img_circle 2s 3s linear ;
+    }
+
+    & .grid_image{
+        position: absolute;
+        top: 350px;
+        left: 220px;
+        display: flex;
+        gap:10px;
+
+        & div{
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        & img{
+            padding:0px 10px;
+            animation: rotate_anim  3s 3s ease-in-out;
+        }
+        
+
+        & div:nth-child(2){
+            margin-top: 40px;
+        }
+    }
+
+    & .right{
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        width: 500px;
+        
+        gap:10px;
+
+     & .text{
+        font-weight:bold;
+        font-size: 30px;
+     }
+
+    }
+
+    & .context{
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+
+        & img{
+           object-fit: contain;
+        }
+        & h3{
+            font-size: 30px;
+            display: inline;
+        }
+    }
+
+    
+}
+
+.companis{
+   
+    height: 100px;
+    margin-top: 150px;
+    margin-left:200px;
+    & img{
+        object-fit: cover;
+        width:80%;
+       
+    }
+}
+
+.free_section{
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 100px;
+    background-color: rgb(88, 193, 193);
+    border-radius: 30px;
+}
+
+@keyframes img_circle {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
